@@ -44,22 +44,34 @@ The Blockbuster service should now be running locally.
 #### Create Block
 - **Endpoint**: `POST /blocks`
 - **Description**: Creates a new block for a property.
-- **Example Request**:
-  ```http
-  POST /blocks
-  Content-Type: application/json
+  - **Example Request**:
+    ```http
+    POST /blocks
+    Content-Type: application/json
   
-  {
-    "startDate": "2023-10-10",
-    "endDate": "2023-10-15"
-  }
+    {
+        "startDate": "2023-11-20",
+        "endDate": "2023-11-25",
+        "property": {
+          "id": "property123",
+          "name": "Example Property",
+          "description": "A cozy vacation rental",
+          "location": "123 Main St"
+        }
+    }
   ```
 - **Example Response** (HTTP 201 Created):
   ```json
   {
     "id": "1",
-    "startDate": "2023-10-10",
-    "endDate": "2023-10-15"
+    "startDate": "2023-11-20",
+    "endDate": "2023-11-25",
+    "property": {
+        "id": "property123",
+        "name": "Example Property",
+        "location": "123 Main St",
+        "description": "A cozy vacation rental"
+    }
   }
   ```
 
@@ -75,22 +87,34 @@ The Blockbuster service should now be running locally.
 #### Update Block
 - **Endpoint**: `PUT /blocks/{blockId}`
 - **Description**: Updates the block with the specified `blockId`.
-- **Example Request**:
-  ```http
-  PUT /blocks/1
-  Content-Type: application/json
+  - **Example Request**:
+    ```http
+    PUT /blocks/1
+    Content-Type: application/json
   
-  {
-    "startDate": "2023-10-11",
-    "endDate": "2023-10-16"
-  }
+    {
+       "startDate": "2023-11-10",
+        "endDate": "2023-11-20",
+        "property": {
+          "id": "property123",
+          "name": "Example Property",
+          "description": "A cozy vacation rental",
+          "location": "123 Main St"
+        }
+    }
   ```
 - **Example Response** (HTTP 200 OK):
   ```json
   {
     "id": "1",
-    "startDate": "2023-10-11",
-    "endDate": "2023-10-16"
+    "startDate": "2023-11-10",
+    "endDate": "2023-11-20",
+    "property": {
+        "id": "property123",
+        "name": "Example Property",
+        "location": "123 Main St",
+        "description": "A cozy vacation rental"
+    }
   }
   ```
 
@@ -110,6 +134,11 @@ The Blockbuster service should now be running locally.
     "guest": {
       "name": "John Doe",
       "contactInfo": "john.doe@example.com"
+    },
+    "property": {
+      "id": "123",
+      "name": "Luxury Villa",
+      "location": "Paradise Beach"
     }
   }
   ```
@@ -122,6 +151,11 @@ The Blockbuster service should now be running locally.
     "guest": {
       "name": "John Doe",
       "contactInfo": "john.doe@example.com"
+    },
+    "property": {
+      "id": "123",
+      "name": "Luxury Villa",
+      "location": "Paradise Beach"
     }
   }
   ```
@@ -149,6 +183,11 @@ The Blockbuster service should now be running locally.
     "guest": {
       "name": "Jane Smith",
       "contactInfo": "jane.smith@example.com"
+    },
+    "property": {
+      "id": "123",
+      "name": "Luxury Villa",
+      "location": "Paradise Beach"
     }
   }
   ```
@@ -161,6 +200,11 @@ The Blockbuster service should now be running locally.
     "guest": {
       "name": "Jane Smith",
       "contactInfo": "jane.smith@example.com"
+    },
+    "property": {
+      "id": "123",
+      "name": "Luxury Villa",
+      "location": "Paradise Beach"
     }
   }
   ```
