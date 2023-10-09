@@ -110,6 +110,11 @@ The Blockbuster service should now be running locally.
     "guest": {
       "name": "John Doe",
       "contactInfo": "john.doe@example.com"
+    },
+    "property": {
+      "id": "123",
+      "name": "Luxury Villa",
+      "location": "Paradise Beach"
     }
   }
   ```
@@ -122,6 +127,11 @@ The Blockbuster service should now be running locally.
     "guest": {
       "name": "John Doe",
       "contactInfo": "john.doe@example.com"
+    },
+    "property": {
+      "id": "123",
+      "name": "Luxury Villa",
+      "location": "Paradise Beach"
     }
   }
   ```
@@ -149,6 +159,11 @@ The Blockbuster service should now be running locally.
     "guest": {
       "name": "Jane Smith",
       "contactInfo": "jane.smith@example.com"
+    },
+    "property": {
+      "id": "123",
+      "name": "Luxury Villa",
+      "location": "Paradise Beach"
     }
   }
   ```
@@ -161,6 +176,11 @@ The Blockbuster service should now be running locally.
     "guest": {
       "name": "Jane Smith",
       "contactInfo": "jane.smith@example.com"
+    },
+    "property": {
+      "id": "123",
+      "name": "Luxury Villa",
+      "location": "Paradise Beach"
     }
   }
   ```
